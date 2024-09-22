@@ -1,0 +1,32 @@
+{
+  "destination": "xxxxxxxxxx",
+  "events": [
+    {
+      "type": "message",
+      "message": {
+        "type": "image",
+        "id": "354718705033693859",
+        "quoteToken": "q3Plxr4AgKd...",
+        "contentProvider": {
+          "type": "line"
+        },
+        "imageSet": {
+          "id": "E005D41A7288F41B65593ED38FF6E9834B046AB36A37921A56BC236F13A91855",
+          "index": 1,
+          "total": 1
+        }
+      },
+      "timestamp": 1627356924513,
+      "source": {
+        "type": "user",
+        "userId": "U4af4980629..."
+      },
+      "webhookEventId": "01FZ74A0TDDPYRVKNK77XKC3ZR",
+      "deliveryContext": {
+        "isRedelivery": false
+      },
+      "replyToken": "7840b71058e24a5d91f9b5726c7512c9",
+      "mode": "active"
+    }
+  ]
+}
