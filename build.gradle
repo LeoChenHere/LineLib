@@ -1,9 +1,10 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'org.leochen'
-version = '0.0.1.0.0'
+version = '0.0.1.0.3'
 
 repositories {
     maven {
@@ -55,4 +56,27 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId project.group
+            artifactId project.name
+            version project.version
+            //如果是war包填写components.web，如果是jar包填写components.java
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url = "$project.repoUrl"+"$project.engineeringPath"
+            //认证用户和密码
+            credentials {
+                username project.repoUser
+                password project.repoPassword
+            }
+            allowInsecureProtocol = true
+        }
+    }
 }

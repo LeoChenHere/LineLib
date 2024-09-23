@@ -18,6 +18,7 @@ public class Message {
     @NonNull
     private String text;
     private Long id;
+    @NonNull
     private String quoteToken;
     private ArrayList<Emojis> emojis;
     private Mention mention;

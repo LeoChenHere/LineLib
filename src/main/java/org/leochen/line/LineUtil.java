@@ -22,7 +22,7 @@ public class LineUtil {
         String uri = "https://api.line.me/v2/bot/message/push";
 
         ArrayList<Message> messagesList = new ArrayList<>();
-        messagesList.add(new Message(Message.type.text.name(), message));
+        messagesList.add(new Message(Message.type.text.name(), message, ""));
         Push push = new Push(userId, messagesList);
         log.info(JsonUtil.toJsonString(push));
 
@@ -31,11 +31,11 @@ public class LineUtil {
         log.info(ResultCode.SUCCESS.getMessage());
     }
 
-    public void lineReply(String replyToken, String message) {
+    public void lineReply(String replyToken, String messageStr, String quoteToken) {
         String uri = "https://api.line.me/v2/bot/message/reply";
 
         ArrayList<Message> messagesList = new ArrayList<>();
-        messagesList.add(new Message(Message.type.text.name(), message));
+        messagesList.add(new Message(Message.type.text.name(), messageStr, quoteToken));
         Reply reply = new Reply(replyToken, messagesList);
         log.info(JsonUtil.toJsonString(reply));
 
