@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.ArrayList;
 
 @Data
-public class WebhookData {
+public class InputData {
     private String destination;
     private ArrayList<Events> events;
 }
